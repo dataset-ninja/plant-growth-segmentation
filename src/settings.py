@@ -24,12 +24,8 @@ LICENSE: License = License.Unknown()
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [Research.Biological()]
 CATEGORY: Category = Category.Biology()
 
-CV_TASKS: List[CVTask] = [
-    CVTask.InstanceSegmentation(),
-    CVTask.ObjectDetection(),
-    CVTask.SemanticSegmentation(),
-]
-ANNOTATION_TYPES: List[AnnotationType] = [CVTask.InstanceSegmentation()]
+CV_TASKS: List[CVTask] = [CVTask.SemanticSegmentation()]
+ANNOTATION_TYPES: List[AnnotationType] = [CVTask.SemanticSegmentation()]
 
 RELEASE_DATE: Optional[str] = "2022-10-12"  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
@@ -68,7 +64,9 @@ ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
-SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = None
+SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
+    "__POSTTEXT__": "Also Dataset includes repository(***rep_01***, ***rep_02*** ... ***rep_07***) and ***plant_id*** tags."
+}
 TAGS: Optional[List[str]] = None
 
 
