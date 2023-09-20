@@ -24,8 +24,12 @@ LICENSE: License = License.Unknown()
 APPLICATIONS: List[Union[Industry, Domain, Research]] = None
 CATEGORY: Category = None
 
-CV_TASKS: List[CVTask] = None
-ANNOTATION_TYPES: List[AnnotationType] = None
+CV_TASKS: List[CVTask] = [
+    CVTask.InstanceSegmentation(),
+    CVTask.ObjectDetection(),
+    CVTask.SemanticSegmentation(),
+]
+ANNOTATION_TYPES: List[AnnotationType] = [CVTask.InstanceSegmentation()]
 
 RELEASE_DATE: Optional[str] = "2022-10-12"  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
@@ -43,9 +47,9 @@ GITHUB_URL: str = "https://github.com/dataset-ninja/plant-growth-segmentation"
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[
-    Union[str, dict]
-] = "https://www.kaggle.com/datasets/shengyou222/plantgrowthsegmentationdataset"
+DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = [
+    "https://www.kaggle.com/datasets/shengyou222/plantgrowthsegmentationdataset"
+]
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
