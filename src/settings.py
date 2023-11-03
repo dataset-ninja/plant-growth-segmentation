@@ -66,7 +66,7 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
-    "__POSTTEXT__": "Also Dataset includes repository (***rep_01***, ***rep_02*** ... ***rep_07***) and ***plant_id*** tags."
+    "__POSTTEXT__": "Also Dataset includes repository (***rep_01***, ***rep_02*** ... ***rep_07***) and ***plant_id*** (L-52, h38, ... etc.) tags"
 }
 TAGS: Optional[List[str]] = None
 
